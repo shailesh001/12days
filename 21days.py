@@ -15,7 +15,7 @@ days = ["first",
 
 
 
-presents = ["a Partridge in a Pear Tree",
+presents = ["and a Partridge in a Pear Tree",
             "Two Turtle Doves",
             "Three French Hens",
             "Four Calling Birds",
@@ -28,21 +28,20 @@ presents = ["a Partridge in a Pear Tree",
             "Eleven Pipers Piping",
             "12 Drummers Drumming"]
 
-and_partridge = "and a Partridge in a Pear Tree"
+a_partridge = "a Partridge in a Pear Tree"
 
 # enumerate gives an index and element reference
 for i, day in enumerate(days):
     print first_line %(day)
 
-    # Print list in reverse range([start], stop[, step])
-    for a in range(i, 0, -1):
-        print presents[a]
-
-    # Need an 'and' on subsequent verses
+    # Needed only for the first verse
     if (i == 0):
-        print presents[0]
+        print a_partridge
     else:
-        print and_partridge
+        # Print list in reverse range([start], stop[, step])
+        for a in range(i, -1, -1):
+            print presents[a]
+
     print "\n"
 
 
