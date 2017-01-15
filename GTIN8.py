@@ -4,6 +4,7 @@ result_list = []
 
 #print len(num)
 
+# Create Input based on multiplier i.e every odd digit is multiplied by 3
 for index in range(0,len(num)):
     #print index
     #print "index = %d and num = %s" % (index,num[index])
